@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "platform": "android",
+      "version": "1.2.0",
+      "update": 1,
+      "store":"com.skanderjabouzi.quran",
+      "message":"Please update the app so you can continue tp use it!"
+    },
+    {
+       "platform": "ios",
+      "version": "1.0",
+      "update": 0,
+      "store":"http://content.sportslogos.net/logos/6/220/full/9168_atlanta_hawks-primary-2016.png",
+      "message":"lease update the app so you can continue tp use it!"
+    }
+  ]
+}
