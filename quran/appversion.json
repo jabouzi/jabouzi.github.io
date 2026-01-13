@@ -2,7 +2,7 @@
   "apps": [
     {
       "platform": "android",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "update": 1,
       "store":"com.skanderjabouzi.quran",
       "message":"Please update the app so you can continue tp use it!"
