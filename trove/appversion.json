@@ -1,17 +1,23 @@
 {
   "apps": [
     {
+      "platform": "web",
+      "hide": 1
+    },
+    {
       "platform": "android",
+      "hide": 1
       "version": "1.0.0",
       "update": 0,
-      "appId":"com.skanderjabouzi.salat",
+      "appId":"com.skanderjabouzi.trove",
       "message":"Please update the app so you can continue tp use it!"
     },
     {
-       "platform": "ios",
+      "platform": "ios",
+      "hide": 1
       "version": "1.0.0",
       "update": 0,
-      "appId":"com.skanderjabouzi.salat",
+      "appId":"com.skanderjabouzi.trove",
       "message":"lease update the app so you can continue tp use it!"
     }
   ]
