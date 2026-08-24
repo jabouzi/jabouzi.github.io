@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Adhan</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 20px; color: #333; }
+        ul { list-style: none; max-width: 600px; margin: 0 auto; }
+        li { background: #fff; margin: 8px 0; padding: 12px 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        audio { width: 100%; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Other Adhan</h1>
+    <ul id="list"></ul>
+    <script>
+        const files = [
+            "1-mustafaIsmail.mp3", "10-mustafaIsmail-suriye-1957.mp3",
+            "2-mustafaIsmail-sultanahmetMosque-istanbul-1969-cut.mp3",
+            "3-mustafaIsmail-turkiye-1969.mp3",
+            "4-mustafaIsmail-mescidiEmevi-syria-1959.mp3",
+            "5-mustafaIsmail-mescidiEzherkehf-1955SonundakiEzan.mp3",
+            "6-mustafaIsmail.mp3", "7-mustafaIsmail.mp3", "8-mustafaIsmail.mp3",
+            "9-mustafaIsmail.mp3", "Abdul-Basit.mp3", "Abdul-Ghaffar.mp3",
+            "Abdul-Hakam.mp3", "AbdulatiyNasf.mp3", "AbdulazimZahir.mp3",
+            "AbdulazizHarbi.mp3", "AbdulazizHarbiEzan_64kb.mp3", "AbdulazizHarbiEzan.mp3",
+            "AbdulbasitAbdussamed.mp3", "AbdulfettahShashai.mp3", "AbdulhamidBesusi.mp3",
+            "AbdullahYusuf-mescidiAksa.mp3", "AbdulmunimTuhi.mp3",
+            "AbdussamedfromArrisaleMovie.mp3", "Adhan-Alaqsa.mp3", "Adhan-Egypt.mp3",
+            "Adhan-Halab.mp3", "Adhan-Madinah.mp3", "Adhan-Makkah.mp3",
+            "AdhanFromAlbaniaarnavutEzan.mp3", "AdhanFromEgypt-hicazMakami.mp3",
+            "AdhanWithNey.mp3", "AhmedEdib.mp3", "AhmedNaina_ishakDan_ezan.mp3",
+            "AhmedNaina.mp3", "AhmedRuzeyki.mp3", "AhmedSleymanSudani.mp3",
+            "AhmedTrablusi-nihavendMakami.mp3", "Al-Hussaini.mp3", "AlgeriaAdhan-2.mp3",
+            "AlgeriaAdhan.mp3", "AliHuzeyyin.mp3", "AliMahmud.mp3", "AliMisbah-libya.mp3",
+            "AnterSaidMusaellem-1994.mp3", "AnterSaidMusellem-1982.mp3",
+            "AnterSaidMusellem.mp3", "AsimBahari-mescidiNebevi-1952.mp3", "Athan-4.mp3",
+            "Bakir-Bash.mp3", "BilalFethi-acemMakami.mp3", "BirecikEzanfevziPolat.mp3",
+            "Daresselam.mp3", "Digreery-sabaMakami.mp3", "EbulayneynShaisha-1.mp3",
+            "EbulayneynShaisha-2-veSela.mp3", "EbulayneynShaisha-3-mescidiEmevi-1959.mp3",
+            "FethiMuhammedKandil.mp3", "Hafez.mp3", "Hafiz-Murad.mp3", "HamdiZamil.mp3",
+            "HocaefendiVeMustafaIsmail.mp3", "IranEzan-hicazMakami.mp3",
+            "JerusalemAdhan.mp3", "KamilYusufBehtimi-1.mp3", "KamilYusufBehtimi-2.mp3",
+            "KamilYusufBehtimi-3.mp3", "KuranMusikisi-1978-bornovaMerkez-nisan-cuma.mp3",
+            "MahmudAbdulhakem.mp3", "MahmudAliBenna.mp3", "MahmudBicrimi.mp3",
+            "MahmudHalilHusari-rastMakami.mp3", "MahmudMuhammedRamazan-1.mp3",
+            "MahmudMuhammedRamazan-2.mp3", "MalaysiaAdhan.mp3", "MansurShamiDemanhuri.mp3",
+            "MeariRaidAfasi.mp3", "Minshawi.mp3", "MuhammedAbdulazizHasan.mp3",
+            "MuhammedAtiyyehHisab.mp3", "MuhammedBedrHuseyin.mp3", "MuhammedCibril.mp3",
+            "MuhammedSeleme.mp3", "MuhammedSeyyidHasaneynfatherOfMuhammedCibril.mp3",
+            "MuhammedSiddikMinshevi-1.mp3", "MuhammedSiddikMinshevi-2-baghdadRadio.mp3",
+            "MuhammedSiddikMinshevi-3.mp3", "MuhammedSiddikMinshevi-sela.mp3",
+            "MuhammedTuhi.mp3", "MuhammmedRifat-1.mp3", "MuhammmedRifat-2.mp3",
+            "MustafaOrhan.mp3", "Naghshbandi.mp3", "NasirKatemi-kurdiMakami.mp3",
+            "NasreddinTubar.mp3", "RagibMustafaGalvesh.mp3", "Saber.mp3",
+            "SaidAbdussamedZenati.mp3", "SeyyidMutevelliAbdulal-1.mp3",
+            "SeyyidMutevelliAbdulal-2-hicazMakam.mp3", "SeyyidNakshibendi.mp3",
+            "ShabanAbdulazizSayyad-1.mp3", "ShabanAbdulazizSayyad-2.mp3",
+            "ShabanAbdulazizSayyad-3.mp3", "ShahhatMuhammedEnver.mp3", "Sharif-Doman.mp3",
+            "SyriaAdhan.mp3", "TahaFeshni.mp3", "Tirmizi-bayatMakami.mp3",
+            "TurkEzan-sabaMakami.mp3", "TurkEzan-sigaMakami.mp3",
+            "YasirDusari-sabaMakami.mp3", "Yusuf-Islam.mp3", "YusufIslam.mp3"
+        ];
+        const ul = document.getElementById('list');
+        files.forEach(f => {
+            const li = document.createElement('li');
+            const name = f.replace('.mp3', '').replace(/-/g, ' ');
+            li.innerHTML = `<strong>${name}</strong><br><audio controls preload="none" src="${f}"></audio>`;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>
