@@ -14,7 +14,7 @@
     },
     {
       "platform": "ios",
-      "hide": 1,
+      "hide": 0,
       "version": "1.0.0",
       "update": 0,
       "appId":"com.skanderjabouzi.trove",
