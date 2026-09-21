@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "platform": "web",
+      "hide": 1
+    },
+    {
+      "platform": "android",
+      "hide": 0,
+      "version": "1.0.0",
+      "update": 0,
+      "appId":"com.skanderjabouzi.trove",
+      "message":"Please update the app so you can continue tp use it!"
+    },
+    {
+      "platform": "ios",
+      "hide": 0,
+      "version": "1.0.0",
+      "update": 0,
+      "appId":"com.skanderjabouzi.trove",
+      "message":"Please update the app so you can continue tp use it!"
+    }
+  ]
+}
