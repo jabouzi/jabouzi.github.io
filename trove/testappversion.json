@@ -2,7 +2,7 @@
   "apps": [
     {
       "platform": "web",
-      "hide": 1
+      "hide": 0
     },
     {
       "platform": "android",
