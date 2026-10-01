@@ -5,14 +5,16 @@
       "version": "1.0.0",
       "update": 0,
       "appId":"com.skanderjabouzi.salat",
-      "message":"Please update the app so you can continue tp use it!"
+      "message":"Please update the app so you can continue tp use it!",
+      "md5": "e6190eaa952bdd5e2603004de73d2a5f"
     },
     {
        "platform": "ios",
       "version": "1.0.0",
       "update": 0,
       "appId":"com.skanderjabouzi.salat",
-      "message":"Please update the app so you can continue tp use it!"
+      "message":"Please update the app so you can continue tp use it!",
+      "md5": "e6190eaa952bdd5e2603004de73d2a5f"
     }
   ]
 }
